@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panier - Ma Boutique</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Ma Boutique</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="products.html">Produits</a></li>
+          <li><a href="cart.html" class="active">Panier</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="cart">
+      <div class="container">
+        <h2>Votre Panier</h2>
+        <div id="cart-items"></div>
+        <div class="cart-summary">
+          <p id="cart-total">Total : 0 €</p>
+          <button onclick="clearCart()">Vider le panier</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ma Boutique. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>
