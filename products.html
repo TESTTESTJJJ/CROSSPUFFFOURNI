@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Produits - Ma Boutique</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1><a href="index.html">Ma Boutique</a></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="products.html" class="active">Produits</a></li>
+          <li><a href="cart.html">Panier</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="container">
+        <h2>Nos Produits</h2>
+        <div id="product-list" class="product-grid">
+          <!-- Les produits seront chargés dynamiquement ici -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Ma Boutique. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script>
+    const productList = document.getElementById('product-list');
+
+    products.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product';
+      div.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>${product.price} €</p>
+        <button onclick="addToCart(${product.id})">Ajouter au panier</button>
+      `;
+      productList.appendChild(div);
+    });
+  </script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
